@@ -10,6 +10,7 @@ import { Product } from './models/product-model';
 export class AppComponent {
   title = 'practi-app';
   http = inject(HttpClient)
+  products: Product[] = [];
 
   changeTitle() {
     this.title = 'Mundo';
@@ -17,7 +18,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.http.get('https://api.escuelajs.co/api/v1/products'). subscribe((data : any) => {
-      
+      this.products = data;
     });
   }
 
