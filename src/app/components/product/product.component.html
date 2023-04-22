@@ -1,7 +1,7 @@
 <ng-template *ngIf="product">
     <h2>{{ product.title }}</h2>
     <p>$ {{ product.price }}</p>
-    <img [src]="product.images" alt="">
+    <img [src]="product.images[0]" alt="">
 </ng-template>
 <ng-template *ngIf="!product">
     product no renderizado
