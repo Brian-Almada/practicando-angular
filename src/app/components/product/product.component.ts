@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from './../../models/product-model'
 
 @Component({
   selector: 'app-product',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
 
-  @Input() title: string = '';
+  @Input() product!: Product;
 
 
 }
