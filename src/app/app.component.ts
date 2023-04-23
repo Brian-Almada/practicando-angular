@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.http.get('https://api.escuelajs.co/api/v1/products')
+    this.http.get<Product[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((data : any) => {
         this.products = data;
     });
